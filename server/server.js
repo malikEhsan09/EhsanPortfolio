@@ -7,7 +7,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "http://localhost:3000", // Adjust to your frontend origin
+  origin: [
+    "http://localhost:3000",
+    "https://ehsan-portfolio-umber.vercel.app/",
+    "*",
+  ], // Adjust to your frontend origin
+
   credentials: true,
   optionsSuccessStatus: 200,
 };
