@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
-import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+import React, { useRef, useState } from "react";
+import styled from "styled-components";
+import { Snackbar } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -106,9 +105,21 @@ const ContactButton = styled.input`
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -137,18 +148,38 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await emailjs.sendForm('service_to38ma3', 'template_77z5o2k', form.current, '_7mFYIoqvQi7S0h_L');
-      setSuccess(true);
-      setOpen(true);
-      form.current.reset();
+    const formData = {
+      from_email: form.current.from_email.value,
+      from_name: form.current.from_name.value,
+      subject: form.current.subject.value,
+      message: form.current.message.value,
+    };
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setSuccess(false);
-      }, 2000);
+    try {
+      const response = await fetch("http://localhost:5000/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log(response.text);
+
+      if (response.ok) {
+        setSuccess(true);
+        setOpen(true);
+        form.current.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+      } else {
+        throw new Error("Failed to send email");
+      }
     } catch (error) {
-      console.log(error.text);
+      console.log(error);
       setSuccess(false);
       setOpen(true);
     }
@@ -158,7 +189,9 @@ const Contact = () => {
     <Container>
       <Wrapper>
         <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>
+          Feel free to reach out to me for any questions or opportunities!
+        </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />

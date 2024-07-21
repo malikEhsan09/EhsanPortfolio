@@ -1,16 +1,20 @@
-import pizzaImg from "./projectsImages/pizzaHut.png"
-import NXTgenImg from "./projectsImages/NXT_Gen_Social_App.png"
-import ehsanImg from "./projectsImages/ehsan.jpg"
-import moizImg from "./projectsImages/moiz.jpg"
-import ACl_Image from "./projectsImages/acl_app1.png"
-import Todo from "./projectsImages/Todo_Task.png"
+import pizzaImg from "./projectsImages/pizzaHut.png";
+import NXTgenImg from "./projectsImages/NXT_Gen_Social_App.png";
+import ehsanImg from "./projectsImages/ehsan.jpg";
+import moizImg from "./projectsImages/moiz.jpg";
+import ACl_Image from "./projectsImages/acl_app1.png";
+import Todo from "./projectsImages/Todo_Task.png";
 // import CENIT from "./projectsImages/CenitInernee.jpg"
+import NITB from "./internshipImages/NITB.jpeg";
+import music1 from "./projectsImages/music1.png";
+import BookStore from "./projectsImages/BookStore.png";
+import ResumeExtractor from "./projectsImages/ResumeExtractor.png";
 
 export const Bio = {
   name: "Ehsan Ahmed",
   roles: [
-    "Software Enginner",
-    "Frontend Developer",
+    "Software Engineer",
+    "Full Stack Developer",
     "UI/UX Designer",
     "Programmer",
   ],
@@ -18,7 +22,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/malikEhsan09",
   resume:
-    "https://drive.google.com/file/d/1l5lNict0Xt-cSeyY5Y4i0UsKII_gix19/view?usp=sharing",
+    "https://drive.google.com/file/d/1J273D60g3fo9lxyft4KOJx3TOeGFhf21/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ehsan-ahmed-rafique-b162b6243/",
   insta: "https://www.instagram.com/ehsanahmad.09/",
   facebook: "https://www.facebook.com/profile.php?id=100079383853551",
@@ -102,7 +106,8 @@ export const skills = [
       },
       {
         name: "Laravel",
-        image: "https://static-00.iconduck.com/assets.00/laravel-icon-1990x2048-xawylrh0.png",
+        image:
+          "https://static-00.iconduck.com/assets.00/laravel-icon-1990x2048-xawylrh0.png",
       },
       {
         name: "MongoDB",
@@ -125,8 +130,7 @@ export const skills = [
       },
       {
         name: "SRS",
-        image:
-          "https://t.pimg.jp/108/965/086/1/108965086.jpg",
+        image: "https://t.pimg.jp/108/965/086/1/108965086.jpg",
       },
       {
         name: "UML",
@@ -145,8 +149,7 @@ export const skills = [
     skills: [
       {
         name: "Git",
-        image:
-          "https://iconape.com/wp-content/png_logo_vector/git-icon.png",
+        image: "https://iconape.com/wp-content/png_logo_vector/git-icon.png",
       },
       {
         name: "GitHub",
@@ -165,8 +168,7 @@ export const skills = [
       },
       {
         name: "Postman",
-        image:
-                   "https://www.svgrepo.com/show/354202/postman-icon.svg",
+        image: "https://www.svgrepo.com/show/354202/postman-icon.svg",
       },
       {
         name: "Figma",
@@ -196,6 +198,27 @@ export const experiences = [
     ],
     doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",
   },
+  {
+    id: 1,
+    img: NITB,
+    role: "Frontend Engineer Intern",
+    company: "National Information Technology Board (NITB)",
+    date: "June 2024 - Present",
+    desc: "Working as a Full Stack Developer at that created the Backend API's for HRMIS portal also create a CV extractor Machine learning model.",
+    skills: [
+      "ReactJS",
+      "Redux",
+      "NodeJs",
+      "Material UI",
+      "Next js",
+      "Express js",
+      "Fastify",
+      "MySQL",
+      "Mongo DB",
+      "Python",
+    ],
+    // doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",
+  },
 ];
 
 export const education = [
@@ -204,8 +227,8 @@ export const education = [
     img: "https://upload.wikimedia.org/wikipedia/commons/c/c0/COMSATS_new_logo.jpg",
     school: "Comsats University Islamabad",
     date: "Feb 2021 - Feb 2025",
-    grade: "2.71 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Software Enginnering at Comsats Univeristy Islambad. I have completed  6 semesters and have a CGPA of 2.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.Now I am currently working on my Final Year Project (FYP) which is focused on the Anterior Cruciate Ligament (ACL).",
+    grade: "2.74 CGPA",
+    desc: "I am currently pursuing a Bachelor's degree in Software Enginnering at Comsats Univeristy Islambad. I have completed  7 semesters and have a CGPA of 2.74. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.Now I am currently working on my Final Year Project (FYP) which is focused on the Anterior Cruciate Ligament (ACL).",
     degree: "Bachelor of Science in Software Engineering -(BSSE)",
   },
   {
@@ -230,13 +253,12 @@ export const education = [
 
 export const projects = [
   {
-    id: 9,
+    id: 1,
     title: "PizzaHut_App",
     date: "Oct 2023 - Dec 2023",
     description:
       "PizzaHut is a web application that is also responsive. It has been created using Laravel, which is a PHP framework. Users can sign up and log in to add pizzas and other items to their cart. They can also remove items from the cart. Additionally, users can print the bill with an amazing interface.",
-    image:
-      pizzaImg,
+    image: pizzaImg,
     tags: [
       "Laravel",
       "HTML",
@@ -251,13 +273,12 @@ export const projects = [
     github: "https://github.com/malikEhsan09/PizzaHut_App",
   },
   {
-    id: 0,
+    id: 2,
     title: "NXT Gen Social App",
     date: "Oct 2023 - Dec 2023",
     description:
       "Developed a frontend appllication NXT Gen Social app with appelaing interface using the React js also made chatBot for user quiries. Major functionalities include user can write and share post from voice Speech Recognition",
-    image:
-      NXTgenImg,
+    image: NXTgenImg,
     tags: ["React Js", "DialogueFlow", "Material UI"],
     category: "web app",
     github: "",
@@ -277,14 +298,13 @@ export const projects = [
       },
     ],
   },
- 
+
   {
-    id: 2,
+    id: 3,
     title: "Anterior Cruciate Ligament",
     date: "Oct 2023 - Present",
-    description:
-      "",
-    image:ACl_Image,
+    description: "",
+    image: ACl_Image,
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
     category: "machine learning",
     github: "",
@@ -304,9 +324,9 @@ export const projects = [
       },
     ],
   },
-  
+
   {
-    id: 5,
+    id: 4,
     title: "Todo Web App",
     date: "Jun 2021",
     description:
@@ -317,7 +337,55 @@ export const projects = [
     github: "",
     webapp: "",
   },
- 
+  {
+    id: 5,
+    title: "Music App",
+    date: "Jun 2024",
+    description:
+      " I have created my first Next js project(Music app) using tailwind css , typescript and Aceternity library. .",
+    image: music1,
+    tags: [
+      "Next Js",
+      "VS Code",
+      "Tailwind css",
+      "Typescript ",
+      "Aceternity UI library",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/MusicApp_NextJs",
+    webapp: "",
+  },
+  {
+    id: 6,
+    title: "Resume Extractor",
+    date: "Jul 2024",
+    description:
+      "In this we use ML model and make flask API to upload the CV and our model extracts relevent skills from cv and display it using the HTML and CSS. ",
+    image: ResumeExtractor,
+    tags: ["Python", "VS Code", "HTML", "CSS", "PyPDF2"],
+    category: "machine learning",
+    github: "https://github.com/malikEhsan09/Resume_Skills_Extractor",
+    webapp: "",
+  },
+  {
+    id: 7,
+    title: "Book Store",
+    date: "March 2024",
+    description:
+      "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+    image: BookStore,
+    tags: [
+      "React js",
+      "VS Code",
+      "Tailwind css",
+      "Node js",
+      "Express js",
+      "Mongo DB",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/BookStore",
+    webapp: "",
+  },
 ];
 
 export const TimeLineData = [
