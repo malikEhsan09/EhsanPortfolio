@@ -156,13 +156,16 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://ehsan-portfolio-umber.vercel.app/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       console.log(response.text);
 

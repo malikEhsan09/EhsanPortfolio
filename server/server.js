@@ -7,14 +7,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "https://ehsan-portfolio-umber.vercel.app/",
-    "*",
-  ], // Adjust to your frontend origin
-
-  credentials: true,
-  optionsSuccessStatus: 200,
+  origin: ["http://localhost:3000", "https://ehsan-portfolio-umber.vercel.app"], // Adjust to your frontend origin
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, 
+  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
