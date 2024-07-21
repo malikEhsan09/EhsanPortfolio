@@ -157,7 +157,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://ehsan-portfolio-umber.vercel.app/",
+        "https://ehsan-portfolio-backend-url.vercel.app/send",
         {
           method: "POST",
           headers: {
