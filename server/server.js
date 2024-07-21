@@ -2,12 +2,15 @@ import cors from "cors";
 import express from "express";
 import nodemailer from "nodemailer";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "https://ehsan-portfolio-umber.vercel.app/", // Adjust to your frontend origin
+  origin: ["http://localhost:3000", "https://ehsan-portfolio-umber.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
@@ -15,8 +18,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-
-app.options("*", cors(corsOptions));
 
 app.post("/send", async (req, res) => {
   const { from_email, from_name, subject, message } = req.body;
