@@ -201,7 +201,7 @@ export const experiences = [
   {
     id: 1,
     img: NITB,
-    role: "Frontend Engineer Intern",
+    role: "Full Stack Developer",
     company: "National Information Technology Board (NITB)",
     date: "June 2024 - Present",
     desc: "Working as a Full Stack Developer at that created the Backend API's for HRMIS portal also create a CV extractor Machine learning model.",
