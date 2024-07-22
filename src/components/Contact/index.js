@@ -140,7 +140,6 @@ const SuccessMessage = styled.div`
 `;
 
 const Contact = () => {
-  // Hooks
   const [open, setOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const form = useRef();
@@ -148,27 +147,15 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = {
-      from_email: form.current.from_email.value,
-      from_name: form.current.from_name.value,
-      subject: form.current.subject.value,
-      message: form.current.message.value,
-    };
+    const formData = new FormData(form.current);
+    const formUrl =
+      "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse"; // Replace with your Google Form URL
 
     try {
-      const response = await fetch(
-        "https://ehsan-portfolio-server.vercel.app/send",
-
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      console.log(response.text);
+      const response = await fetch(formUrl, {
+        method: "POST",
+        body: formData,
+      });
 
       if (response.ok) {
         setSuccess(true);
@@ -198,10 +185,23 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput
+            placeholder="Your Email"
+            name="entry.2005620554" // Replace with your form's email entry ID
+          />
+          <ContactInput
+            placeholder="Your Name"
+            name="entry.1045781291" // Replace with your form's name entry ID
+          />
+          <ContactInput
+            placeholder="Subject"
+            name="entry.1065046570" // Replace with your form's subject entry ID
+          />
+          <ContactInputMessage
+            placeholder="Message"
+            rows="4"
+            name="entry.839337160" // Replace with your form's message entry ID
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         {success && <SuccessMessage>Email sent successfully!</SuccessMessage>}
