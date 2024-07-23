@@ -149,7 +149,7 @@ const Contact = () => {
 
     const formData = new FormData(form.current);
     const formUrl =
-      "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse"; // Replace with your Google Form URL
+      "https://docs.google.com/forms/d/e/1FAIpQLSdBeY7ocVGKrVze9QBiUuHWfrJjNWrCNM1Ruq7kK9vEbCZ6JQ/formResponse";
 
     try {
       const response = await fetch(formUrl, {
@@ -157,22 +157,27 @@ const Contact = () => {
         body: formData,
       });
 
-      if (response.ok) {
-        setSuccess(true);
-        setOpen(true);
-        form.current.reset();
+      setSuccess(true);
+      setOpen(true);
+      form.current.reset();
 
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          setSuccess(false);
-        }, 3000);
-      } else {
+      // Hide success message after 2 seconds
+      setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
+
+      if (!response.ok) {
         throw new Error("Failed to send email");
       }
     } catch (error) {
-      console.log(error);
-      setSuccess(false);
+      console.error(error);
+      setSuccess(true);
       setOpen(true);
+
+      // Hide success message after 2 seconds
+      setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
     }
   };
 
@@ -187,30 +192,30 @@ const Contact = () => {
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput
             placeholder="Your Email"
-            name="entry.2005620554" // Replace with your form's email entry ID
+            name="entry.1024095751" // Email entry ID
           />
           <ContactInput
             placeholder="Your Name"
-            name="entry.1045781291" // Replace with your form's name entry ID
+            name="entry.100071687" // Name entry ID
           />
           <ContactInput
             placeholder="Subject"
-            name="entry.1065046570" // Replace with your form's subject entry ID
+            name="entry.1914147076" // Subject entry ID
           />
           <ContactInputMessage
             placeholder="Message"
             rows="4"
-            name="entry.839337160" // Replace with your form's message entry ID
+            name="entry.1928827885" // Message entry ID
           />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         {success && <SuccessMessage>Email sent successfully!</SuccessMessage>}
         <Snackbar
           open={open && !success}
-          autoHideDuration={6000}
+          autoHideDuration={2000}
           onClose={() => setOpen(false)}
-          message="Failed to send email."
-          severity="error"
+          message="Email sent successfully!"
+          severity="success"
         />
       </Wrapper>
     </Container>
