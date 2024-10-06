@@ -205,7 +205,7 @@ const Contact = () => {
           <ContactInputMessage
             placeholder="Message"
             rows="4"
-            name="entry.1928827885" // Message entry ID
+            name="entry.1928827885" // Message entry ID for form
           />
           <ContactButton type="submit" value="Send" />
         </ContactForm>

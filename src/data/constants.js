@@ -9,6 +9,7 @@ import NITB from "./internshipImages/NITB.jpeg";
 import music1 from "./projectsImages/music1.png";
 import BookStore from "./projectsImages/BookStore.png";
 import ResumeExtractor from "./projectsImages/ResumeExtractor.png";
+import DevHawks from "../data/internshipImages/devHawks.jpeg";
 
 export const Bio = {
   name: "Ehsan Ahmed",
@@ -201,9 +202,9 @@ export const experiences = [
   {
     id: 1,
     img: NITB,
-    role: "Full Stack Developer",
+    role: "Full Stack Developer Intern",
     company: "National Information Technology Board (NITB)",
-    date: "June 2024 - Present",
+    date: "June 2024 - August 2024",
     desc: "Working as a Full Stack Developer at that created the Backend API's for HRMIS portal also create a CV extractor Machine learning model.",
     skills: [
       "ReactJS",
@@ -215,6 +216,26 @@ export const experiences = [
       "Fastify",
       "MySQL",
       "Mongo DB",
+      "Python",
+    ],
+    // doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",
+  },
+  {
+    id: 3,
+    img: DevHawks,
+    role: "Full Stack Developer",
+    company: "DevHawsk",
+    date: "August 2024 - Present",
+    desc: "As a Full Stack Developer at DevHawks, I developed two key projects. The first is an HR-ChatBot using the MERN stack, automating HR queries and improving internal communication. The second is AI Lawlense, built with Next.js and RAG for legal assistance, where users get AI-driven answers to legal queries by retrieving relevant information from knowledge sources.",
+    skills: [
+      "ReactJS",
+      "Redux",
+      "Next js",
+      "Material UI",
+      "NodeJs",
+      "Express js",
+      "Mongo DB",
+      "RAG (Retrieval-Augmented Generation)",
       "Python",
     ],
     // doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",

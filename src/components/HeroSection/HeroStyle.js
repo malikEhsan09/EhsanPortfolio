@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 // import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -166,38 +166,113 @@ export const SubTitle = styled.div`
   }
 `;
 
-export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
+// export const ResumeButton = styled.a`
+//     -webkit-appearance: button;
+//     -moz-appearance: button;
+//     appearance: button;
+//     text-decoration: none;
+//     width: 95%;
+//     max-width: 300px;
+//     text-align: center;
+//     padding: 16px 0;
+//     color:${({ theme }) => theme.white};
+//     border-radius: 20px;
+//     cursor: pointer;
+//     font-size: 20px;
+//     font-weight: 600;
+//     transition: all 0.2s ease-in-out !important;
+//     background: hsla(271, 100%, 50%, 1);
+//     background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//     background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//     background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+//     box-shadow:  20px 20px 60px #1F2634,
+//     -20px -20px 60px #1F2634;
+//     &:hover {
+//         transform: scale(1.05);
+//     transition: all 0.4s ease-in-out;
+//     box-shadow:  20px 20px 60px #1F2634,
+//     filter: brightness(1);
+//     }
 
+//     @media (max-width: 640px) {
+//         padding: 12px 0;
+//         font-size: 18px;
+//     }
+
+// `;
+
+const flareAnimation = keyframes`
+  0% { 
+    background-position: 0% 50%;
+  }
+  100% { 
+    background-position: 100% 50%;
+  }
+`;
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+    box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 25px 25px 70px #1F2634, -25px -25px 70px #1F2634;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  }
+`;
+
+const hoverMovement = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const ResumeButton = styled.a`
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  padding: 20px 40px;
+  text-align: center;
+  color: ${({ theme }) => theme.white};
+  border-radius: 50px; /* Fully rounded button */
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 35%, 1) 0%,
+    hsla(280, 50%, 30%, 9) 100%
+  );
+  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  background-size: 200% 200%;
+  border: 2px solid transparent; /* Initially transparent outline */
+  animation: ${flareAnimation} 4s ease-in-out infinite, ${pulse} 6s infinite;
+
+  &:hover {
+    transform: scale(1.05) translateY(-3px); /* Slight upward movement */
+    transition: all 0.4s ease-in-out;
+    box-shadow: 30px 30px 80px #1f2634, -30px -30px 80px #1f2634;
+    border: 2px solid ${({ theme }) => theme.white}; /* Outline appears on hover */
+    filter: brightness(1.2);
+    animation: ${hoverMovement} 0.4s ease-in-out;
+  }
+
+  @media (max-width: 640px) {
+    padding: 16px 30px;
+    font-size: 18px;
+  }
 `;

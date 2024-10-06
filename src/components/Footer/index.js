@@ -1,18 +1,17 @@
-import styled from 'styled-components';
-import FacebookIcon from '@mui/icons-material/Facebook';
-// import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { Bio } from '../../data/constants';
+import React, { useState } from "react";
+import styled from "styled-components";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GithubIcon from "@mui/icons-material/GitHub";
+import { Bio } from "../../data/constants";
 
 const FooterContainer = styled.div`
   width: 100%;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  //background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%);
 `;
-
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -49,7 +48,7 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary};
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
@@ -64,6 +63,7 @@ color: ${({ theme }) => theme.text_primary};
 const SocialMediaIcons = styled.div`
   display: flex;
   margin-top: 1rem;
+  position: relative; /* Positioning for the toast */
 `;
 
 const SocialMediaIcon = styled.a`
@@ -77,6 +77,20 @@ const SocialMediaIcon = styled.a`
   }
 `;
 
+const Toast = styled.div`
+  position: absolute;
+  bottom: -2rem; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: ${({ theme }) => theme.primary};
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+`;
+
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
@@ -85,6 +99,18 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const [toastMessage, setToastMessage] = useState("");
+
+  // Function to show the toast message
+  const handleMouseEnter = (message) => {
+    setToastMessage(message);
+  };
+
+  // Function to hide the toast message
+  const handleMouseLeave = () => {
+    setToastMessage("");
+  };
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -97,15 +123,41 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          {/* <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon> */}
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.facebook}
+            target="display"
+            onMouseEnter={() => handleMouseEnter("Facebook")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <FacebookIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.linkedin}
+            target="display"
+            onMouseEnter={() => handleMouseEnter("LinkedIn")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <LinkedInIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.insta}
+            target="display"
+            onMouseEnter={() => handleMouseEnter("Instagram")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <InstagramIcon />
+          </SocialMediaIcon>
+          <SocialMediaIcon
+            href={Bio.github}
+            target="display"
+            onMouseEnter={() => handleMouseEnter("Github")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <GithubIcon />
+          </SocialMediaIcon>
+          {toastMessage && <Toast>{toastMessage}</Toast>}{" "}
         </SocialMediaIcons>
-        <Copyright>
-          &copy; 2024 Ehsan Ahmed. All rights reserved.
-        </Copyright>
-
+        <Copyright>&copy; 2024 Ehsan Ahmed. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
