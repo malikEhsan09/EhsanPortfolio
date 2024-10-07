@@ -39,3 +39,32 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #626970;
   }
+
+
+
+
+
+  /* Add this to your App.css for extra smooth motion */
+.circular-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 20s linear infinite; /* Customize speed as needed */
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
