@@ -51,10 +51,29 @@ const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   text-decoration: none;
   font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 4px; /* Space between text and underline */
   transition: color 0.2s ease-in-out;
+
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.primary};
+    transition: width 0.4s ease-in-out; /* Smooth underline transition */
+  }
+
+  &:hover::after {
+    width: 100%; /* Expand the underline on hover */
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
   }
