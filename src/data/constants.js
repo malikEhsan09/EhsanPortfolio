@@ -224,7 +224,7 @@ export const experiences = [
     id: 3,
     img: DevHawks,
     role: "Full Stack Developer",
-    company: "DevHawsk",
+    company: "DevHawks",
     date: "August 2024 - Present",
     desc: "As a Full Stack Developer at DevHawks, I developed two key projects. The first is an HR-ChatBot using the MERN stack, automating HR queries and improving internal communication. The second I also created is AI Lawlense deployed at lawlensai.com, built with Next.js and RAG for legal assistance, where users get AI-driven answers to legal queries by retrieving relevant information from knowledge sources.",
     skills: [
