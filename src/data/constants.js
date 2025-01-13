@@ -10,6 +10,7 @@ import music1 from "./projectsImages/music1.png";
 import BookStore from "./projectsImages/BookStore.png";
 import ResumeExtractor from "./projectsImages/ResumeExtractor.png";
 import DevHawks from "../data/internshipImages/devHawks.jpeg";
+import thyreality from '../data/internshipImages/ThyRealityLogo.svg'
 
 export const Bio = {
   name: "Ehsan Ahmed",
@@ -237,6 +238,28 @@ export const experiences = [
       "Mongo DB",
       "RAG (Retrieval-Augmented Generation)",
       "Python",
+    ],
+    // doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",
+  },
+   {
+    id: 4,
+    img: thyreality,
+    role: "Full Stack Engineer",
+    company: "thyReality",
+    date: "November 2024 - Present", 
+    desc: "As a Full Stack Engineer at thyReality, I worked on several projects. I built nyTech, a platform using Next.js and Nest.js, where students can apply for internships, with Postmark for document handling. I also created the frontend for Savour Coffee, a web app for showcasing the brand. Currently, I am developing thyFleet, a taxi booking app using React Native.",
+    skills: [
+      "React JS",
+      "Next js",
+      "React Native",
+      "Material UI",
+      "Shadcn UI",
+      "Nest JS",
+      "Acertinity UI",
+      "Postgre SQL",
+      "Node Js",
+      "Express js",
+      "Mongo DB",
     ],
     // doc: "https://firebasestorage.googleapis.com/v0/b/internshipcertificate-7639b.appspot.com/o/CenitInernee.jpg?alt=media&token=463c7706-0171-4fca-9c89-e7181b32b800",
   },
