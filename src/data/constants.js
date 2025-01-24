@@ -19,7 +19,7 @@ export const Bio = {
     "Full Stack Developer",
     "Frontend Developer",
     "Quality Assurance Engineer (QA Engineer)",
-    "UI/UX Designer",
+    // "UI/UX Designer",
     "Programmer",
   ],
   description:
