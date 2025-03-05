@@ -95,11 +95,3 @@ Reach out to me through the **Contact Form** on the portfolio or via the social 
 
 © 2024 Ehsan. All rights reserved.
 ```
-
-### Key Improvements:
-- Organized the content with clear headers.
-- Added better code block formatting for the project structure.
-- Used concise and engaging language to make it easier to follow.
-- Provided links to relevant documentation.
-
-This version should make your repository more professional and easier to navigate! Let me know if you'd like any more changes.
