@@ -11,6 +11,7 @@ import BookStore from "./projectsImages/BookStore.png";
 import ResumeExtractor from "./projectsImages/ResumeExtractor.png";
 import DevHawks from "../data/internshipImages/devHawks.jpeg";
 import thyreality from '../data/internshipImages/ThyRealityLogo.svg'
+import cevenTech from './projectsImages/ceven-pic-portfolio.png'
 
 export const Bio = {
   name: "Ehsan Ahmed",
@@ -18,8 +19,8 @@ export const Bio = {
     "Software Engineer",
     "Full Stack Developer",
     "Frontend Developer",
-    "Quality Assurance Engineer (QA Engineer)",
-    // "UI/UX Designer",
+    "SQA Engineer",
+    "UI/UX Designer",
     "Programmer",
   ],
   description:
@@ -327,20 +328,20 @@ export const projects = [
     image: NXTgenImg,
     tags: ["React Js", "DialogueFlow", "Material UI"],
     category: "web app",
-    github: "",
+    github: "https://github.com/malikEhsan09/NXT_Gen_SocialMedia_App",
     webapp: "",
     member: [
       {
         name: "Ehsan Ahmed",
         img: ehsanImg,
         linkedin: "https://www.linkedin.com/in/ehsan-ahmed-rafique-b162b6243/",
-        github: "",
+        github: "https://github.com/malikEhsan09/",
       },
       {
         name: "Abdul Moiz",
         img: moizImg,
-        linkedin: "",
-        github: "",
+        linkedin: "https://www.linkedin.com/in/meabdulmoiz/",
+        github: "https://github.com/abdulmoiz30",
       },
     ],
   },
@@ -348,25 +349,25 @@ export const projects = [
   {
     id: 3,
     title: "Anterior Cruciate Ligament",
-    date: "Oct 2023 - Present",
+    date: "Oct 2023 - Dec 2024",
     description: "",
     image: ACl_Image,
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "",
+    tags: ["Python", "Keras", "TensorFlow", "CNN", "Pickle", "Next.JS","TypeScript", "Tailwind css", "Node JS", "Express JS", "MongoDB", "Acerternity UI", "Shadcn UI", "RAG", "Git" , "Github"],
+    category: ["machine learning", "web app"],
+    github: "https://github.com/malikEhsan09/Frontend-ACL-Anterior_Cruciate_Ligament.git",
     webapp: "",
     member: [
       {
         name: "Ehsan Ahmed",
         img: ehsanImg,
-        linkedin: "",
-        github: "",
+        linkedin: "https://www.linkedin.com/in/ehsan-ahmed-rafique-b162b6243/",
+        github: "https://github.com/malikEhsan09/",
       },
       {
         name: "Abdul Moiz",
         img: moizImg,
-        linkedin: "",
-        github: "",
+        linkedin: "https://www.linkedin.com/in/meabdulmoiz/",
+        github: "https://github.com/abdulmoiz30",
       },
     ],
   },
@@ -427,6 +428,81 @@ export const projects = [
       "Node js",
       "Express js",
       "Mongo DB",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/BookStore",
+    webapp: "",
+  },
+  {
+    id: 8,
+    title: "NyTech",
+    date: "December 2024",
+    description:
+      "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+    image: BookStore,
+    tags: [
+      "React js",
+      "VS Code",
+      "Tailwind css",
+      "Node js",
+      "Express js",
+      "Mongo DB",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/BookStore",
+    webapp: "",
+  },
+  {
+    id: 9,
+    title: "AI Lawlense",
+    date: "December 2024",
+    description:
+      "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+    image: BookStore,
+    tags: [
+      "React js",
+      "VS Code",
+      "Tailwind css",
+      "Node js",
+      "Express js",
+      "Mongo DB",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/BookStore",
+    webapp: "",
+  },
+  {
+    id: 10,
+    title: "Hr-ChatBot",
+    date: "December 2024",
+    description:
+      "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+    image: BookStore,
+    tags: [
+      "React js",
+      "VS Code",
+      "Tailwind css",
+      "Node js",
+      "Express js",
+      "Mongo DB",
+    ],
+    category: "web app",
+    github: "https://github.com/malikEhsan09/BookStore",
+    webapp: "",
+  },
+  {
+    id: 8,
+    title: "Ceven-technologies",
+    date: "August 2024",
+    description:
+      "A  Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+    image: cevenTech,
+    tags: [
+      "React js",
+      "VS Code",
+      "Tailwind css",
+      "Acertinity UI",
+      "Lucid-react icon"
     ],
     category: "web app",
     github: "https://github.com/malikEhsan09/BookStore",
