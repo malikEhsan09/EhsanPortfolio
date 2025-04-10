@@ -12,6 +12,8 @@ import ResumeExtractor from "./projectsImages/ResumeExtractor.png";
 import DevHawks from "../data/internshipImages/devHawks.jpeg";
 import thyreality from '../data/internshipImages/ThyRealityLogo.svg'
 import cevenTech from './projectsImages/ceven-pic-portfolio.png'
+import NyTech from './projectsImages/NyTechImg.png'
+import HrChat from './projectsImages/HR-Chat.png'
 
 export const Bio = {
   name: "Ehsan Ahmed",
@@ -439,7 +441,7 @@ export const projects = [
     date: "December 2024",
     description:
       "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
-    image: BookStore,
+    image: NyTech,
     tags: [
       "React js",
       "VS Code",
@@ -449,35 +451,35 @@ export const projects = [
       "Mongo DB",
     ],
     category: "web app",
-    github: "https://github.com/malikEhsan09/BookStore",
-    webapp: "",
+    github: "https://github.com/malikEhsan09/",
+    webapp: "https://www.nytechcareer.com/",
   },
-  {
-    id: 9,
-    title: "AI Lawlense",
-    date: "December 2024",
-    description:
-      "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
-    image: BookStore,
-    tags: [
-      "React js",
-      "VS Code",
-      "Tailwind css",
-      "Node js",
-      "Express js",
-      "Mongo DB",
-    ],
-    category: "web app",
-    github: "https://github.com/malikEhsan09/BookStore",
-    webapp: "",
-  },
+  // {
+  //   id: 9,
+  //   title: "AI Lawlense",
+  //   date: "December 2024",
+  //   description:
+  //     "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
+  //   image: BookStore,
+  //   tags: [
+  //     "React js",
+  //     "VS Code",
+  //     "Tailwind css",
+  //     "Node js",
+  //     "Express js",
+  //     "Mongo DB",
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/malikEhsan09/BookStore",
+  //   webapp: "",
+  // },
   {
     id: 10,
     title: "Hr-ChatBot",
     date: "December 2024",
     description:
       "A full-stack Book Store application built with the MERN (MongoDB, Express, React, Node.js) stack. It features user authentication (signup and login), book management (add, update, delete books), and a contact page for user queries.",
-    image: BookStore,
+    image: HrChat,
     tags: [
       "React js",
       "VS Code",
@@ -487,11 +489,11 @@ export const projects = [
       "Mongo DB",
     ],
     category: "web app",
-    github: "https://github.com/malikEhsan09/BookStore",
+    github: "https://github.com/malikEhsan09/HR-chatting-frontend.git",
     webapp: "",
   },
   {
-    id: 8,
+    id:11,
     title: "Ceven-technologies",
     date: "August 2024",
     description:
@@ -505,8 +507,8 @@ export const projects = [
       "Lucid-react icon"
     ],
     category: "web app",
-    github: "https://github.com/malikEhsan09/BookStore",
-    webapp: "",
+    github: "https://github.com/malikEhsan09/",
+    webapp: "https://www.ceventech.com/",
   },
 ];
 
